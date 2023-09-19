@@ -1,0 +1,11 @@
+C:\Users\xinlo\OneDrive\Máy tính\filecode\ce sharp\kteam\onclassweek5BT\bin\Debug\onclassweek5BT.exe.config
+C:\Users\xinlo\OneDrive\Máy tính\filecode\ce sharp\kteam\onclassweek5BT\bin\Debug\onclassweek5BT.exe
+C:\Users\xinlo\OneDrive\Máy tính\filecode\ce sharp\kteam\onclassweek5BT\bin\Debug\onclassweek5BT.pdb
+C:\Users\xinlo\OneDrive\Máy tính\filecode\ce sharp\kteam\onclassweek5BT\obj\Debug\onclassweek5BT.csproj.AssemblyReference.cache
+C:\Users\xinlo\OneDrive\Máy tính\filecode\ce sharp\kteam\onclassweek5BT\obj\Debug\onclassweek5BT.Form1.resources
+C:\Users\xinlo\OneDrive\Máy tính\filecode\ce sharp\kteam\onclassweek5BT\obj\Debug\onclassweek5BT.Form2.resources
+C:\Users\xinlo\OneDrive\Máy tính\filecode\ce sharp\kteam\onclassweek5BT\obj\Debug\onclassweek5BT.Properties.Resources.resources
+C:\Users\xinlo\OneDrive\Máy tính\filecode\ce sharp\kteam\onclassweek5BT\obj\Debug\onclassweek5BT.csproj.GenerateResource.cache
+C:\Users\xinlo\OneDrive\Máy tính\filecode\ce sharp\kteam\onclassweek5BT\obj\Debug\onclassweek5BT.csproj.CoreCompileInputs.cache
+C:\Users\xinlo\OneDrive\Máy tính\filecode\ce sharp\kteam\onclassweek5BT\obj\Debug\onclassweek5BT.exe
+C:\Users\xinlo\OneDrive\Máy tính\filecode\ce sharp\kteam\onclassweek5BT\obj\Debug\onclassweek5BT.pdb
