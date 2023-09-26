@@ -73,7 +73,7 @@ namespace onclassweek6
                 }
                 else
                 {
-                    MessageBox.Show("Selected faculty does not exist in the database.");
+                    MessageBox.Show("Khoa ban chon khong nam trong database.");
                 }
                 st.AVERAGESCORE = Convert.ToInt32(txtDTB.Text);
                 db.SaveChanges();
