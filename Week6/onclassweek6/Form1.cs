@@ -25,6 +25,7 @@ namespace onclassweek6
             {
                 List<tblStudent> dssv = db.tblStudents.ToList();
                 List<tblFaculty> dsk = db.tblFaculties.ToList();
+                cbmKhoa.SelectedIndex = 0;
                 BindGird(dssv);
             } catch (Exception ex)
             {
@@ -47,17 +48,52 @@ namespace onclassweek6
 
         private void btnAdd_Click(object sender, EventArgs e)
         {
-            tblStudent st = new tblStudent()
+            try
             {
-                STUDENTID = txtMSSV.Text,
-                FULLNAME = txtHoten.Text,
-                FACULTYID = cbmKhoa.SelectedIndex + 1,
-                AVERAGESCORE = Convert.ToDouble(txtDTB.Text)
-            };
-                db.tblStudents.Add(st);
-                db.SaveChanges();
-        }
+                if (txtMSSV.Text == "" || txtHoten.Text == "" || txtDTB.Text == "")
+                    throw new Exception("vui long nhap day du thong tin sinh vien");
+                if (txtMSSV.Text.Length != 10)
+                    throw new Exception("ma sinh vien phai du 10 ki tu ");
+                long max;
+                if (checkIDsv(txtMSSV.Text) == -1)//-1 la sinh vien moi
+                {
+                    if (double.Parse(this.txtDTB.Text) >= 0 && double.Parse(this.txtDTB.Text) <= 10)
+                    {
 
+                        tblStudent st = new tblStudent()
+                        {
+                            STUDENTID = txtMSSV.Text,
+                            FULLNAME = txtHoten.Text,
+                            FACULTYID = cbmKhoa.SelectedIndex + 1,
+                            AVERAGESCORE = Convert.ToDouble(txtDTB.Text)
+                        };
+                        db.tblStudents.Add(st);
+                        db.SaveChanges();
+                        refresh();
+                    }
+                    else
+                    {
+                        MessageBox.Show("chi nhap so tu 1-10");
+                        txtDTB.Focus();
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+        private int checkIDsv(string newidsv)
+        {
+            int length = dataGridView1.Rows.Count;
+            for (int i = 0; i < length; i++)
+            {
+                if (dataGridView1.Rows[i].Cells[0].Value != null)
+                    if (dataGridView1.Rows[i].Cells[0].Value.ToString() == newidsv)
+                        return i;
+            }
+            return -1;//khong tim thay
+        }
         private void btnUpdate_Click(object sender, EventArgs e)
         {
             String id = (dataGridView1.SelectedRows[0].Cells["Column1"].Value.ToString());
@@ -76,25 +112,45 @@ namespace onclassweek6
                     MessageBox.Show("Khoa ban chon khong nam trong database.");
                 }
                 st.AVERAGESCORE = Convert.ToInt32(txtDTB.Text);
+                MessageBox.Show($"sua sinh vien {st.STUDENTID} thanh cong", "thong bao ", MessageBoxButtons.OK);
                 db.SaveChanges();
+                refresh();
             }
         }
-
         private void btnDelete_Click(object sender, EventArgs e)
         {
             var rowData = dataGridView1.SelectedRows[0].Cells["Column1"].Value.ToString();
-            tblStudent nv = db.tblStudents.Find(rowData);
-            db.tblStudents.Remove(nv);
-            db.SaveChanges();
+            tblStudent st = db.tblStudents.Find(rowData);
+            DialogResult result = MessageBox.Show($"ban co dong y xoa sinh vien{st.FULLNAME}", "thong bao", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if (result == DialogResult.Yes)
+            {
+                db.tblStudents.Remove(st);
+                MessageBox.Show($"xoa sinh vien {st.FULLNAME}thanh cong", "thong bao ", MessageBoxButtons.OK);
+
+                db.SaveChanges();
+                refresh();
+            }
         }
 
-        private void btnRef_Click(object sender, EventArgs e)
-        {
-
+        private void refresh(){
+            List<tblStudent> dssv = db.tblStudents.ToList();
+            BindGird(dssv);
             //var result = dssv;
             //dataGridView1.DataSource = result;
             dataGridView1.Update();
             dataGridView1.Refresh();
+        }
+
+        private void dataGridView1_SelectionChanged(object sender, EventArgs e)
+        {
+            if(dataGridView1.SelectedRows.Count > 0)
+            {
+                DataGridViewRow row = dataGridView1.SelectedRows[0];
+                txtMSSV.Text = row.Cells["Column1"].Value.ToString();
+                txtHoten.Text = row.Cells["Column2"].Value.ToString();
+                cbmKhoa.SelectedItem = row.Cells["Column4"].Value.ToString();
+                txtDTB.Text = row.Cells["Column3"].Value.ToString();
+            }
         }
     }
 

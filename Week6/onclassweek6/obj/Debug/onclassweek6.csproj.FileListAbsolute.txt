@@ -28,3 +28,18 @@ C:\Users\Minh Tan\source\repos\Week6\onclassweek6\obj\Debug\onclassweek6.csproj.
 C:\Users\Minh Tan\source\repos\Week6\onclassweek6\obj\Debug\onclassweek6.csproj.CopyComplete
 C:\Users\Minh Tan\source\repos\Week6\onclassweek6\obj\Debug\onclassweek6.exe
 C:\Users\Minh Tan\source\repos\Week6\onclassweek6\obj\Debug\onclassweek6.pdb
+C:\Users\Administrator\Source\Repos\nnminhtan-codedump\Week6\onclassweek6\bin\Debug\onclassweek6.exe.config
+C:\Users\Administrator\Source\Repos\nnminhtan-codedump\Week6\onclassweek6\bin\Debug\onclassweek6.exe
+C:\Users\Administrator\Source\Repos\nnminhtan-codedump\Week6\onclassweek6\bin\Debug\onclassweek6.pdb
+C:\Users\Administrator\Source\Repos\nnminhtan-codedump\Week6\onclassweek6\bin\Debug\EntityFramework.dll
+C:\Users\Administrator\Source\Repos\nnminhtan-codedump\Week6\onclassweek6\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Administrator\Source\Repos\nnminhtan-codedump\Week6\onclassweek6\bin\Debug\EntityFramework.xml
+C:\Users\Administrator\Source\Repos\nnminhtan-codedump\Week6\onclassweek6\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Administrator\Source\Repos\nnminhtan-codedump\Week6\onclassweek6\obj\Debug\onclassweek6.csproj.AssemblyReference.cache
+C:\Users\Administrator\Source\Repos\nnminhtan-codedump\Week6\onclassweek6\obj\Debug\onclassweek6.Form1.resources
+C:\Users\Administrator\Source\Repos\nnminhtan-codedump\Week6\onclassweek6\obj\Debug\onclassweek6.Properties.Resources.resources
+C:\Users\Administrator\Source\Repos\nnminhtan-codedump\Week6\onclassweek6\obj\Debug\onclassweek6.csproj.GenerateResource.cache
+C:\Users\Administrator\Source\Repos\nnminhtan-codedump\Week6\onclassweek6\obj\Debug\onclassweek6.csproj.CoreCompileInputs.cache
+C:\Users\Administrator\Source\Repos\nnminhtan-codedump\Week6\onclassweek6\obj\Debug\onclassweek6.csproj.CopyComplete
+C:\Users\Administrator\Source\Repos\nnminhtan-codedump\Week6\onclassweek6\obj\Debug\onclassweek6.exe
+C:\Users\Administrator\Source\Repos\nnminhtan-codedump\Week6\onclassweek6\obj\Debug\onclassweek6.pdb
