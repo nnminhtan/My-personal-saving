@@ -83,13 +83,18 @@ namespace week7
 
         private void dgvData_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            foreach(DataGridViewRow row in dgvData.Rows)
+            
+        }
+
+        private void btnRegister_Click(object sender, EventArgs e)
+        {
+            foreach (DataGridViewRow row in dgvData.Rows)
             {
                 DataGridViewCheckBoxCell checkBoxCell = row.Cells[0] as DataGridViewCheckBoxCell;
-                if(checkBoxCell.Value != null)
+                if (checkBoxCell.Value != null)
                 {
                     bool isChecked = Convert.ToBoolean(checkBoxCell.Value);
-                    string studentID = dgvData.Rows[e.RowIndex].Cells[1].Value.ToString(); // Adjust column name as needed
+                    string studentID = dgvData.CurrentRow.Cells[1].Value.ToString(); // Adjust column name as needed
                     string cn = cbbCN.SelectedValue != null ? cbbCN.SelectedValue.ToString() : null;
                     // Find the student in the list by StudentID
                     if (studentService.FindById(studentID) != null)

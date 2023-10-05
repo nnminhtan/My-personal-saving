@@ -18,7 +18,7 @@ namespace week7
     {
         private readonly StudentService studentService = new StudentService();
         private readonly FacultyService facultyService = new FacultyService();
-
+        private string selectedFilePath;
         public frmqlsv()
         {
             InitializeComponent();
@@ -109,7 +109,7 @@ namespace week7
                     FACULTYID = cbmKhoa.SelectedIndex + 1,
                     AVERAGESCORE = double.Parse(txtDTB.Text),
                     MAJORID = null,
-                    AVATAR = $"{LoadImage()}"
+                    AVATAR = $"{selectedFilePath}"
                 };
                 studentService.InsertUpdate(s);
                 RefreshData();
@@ -123,7 +123,7 @@ namespace week7
                     FACULTYID = cbmKhoa.SelectedIndex + 1,
                     AVERAGESCORE = double.Parse(txtDTB.Text),
                     MAJORID = studentService.FindById(txtMSSV.Text).MAJORID,
-                    AVATAR = $"{LoadImage()}"
+                    AVATAR = $"{selectedFilePath}"
                 };
                 studentService.InsertUpdate(s);
                 RefreshData();
@@ -154,7 +154,7 @@ namespace week7
 
         private void btnbrowse_Click(object sender, EventArgs e)
         {
-            string selectedFilePath = LoadImage();
+            selectedFilePath = LoadImage();
 
             if (selectedFilePath != null)
             {
@@ -171,7 +171,7 @@ namespace week7
 
             if (openFileDialog.ShowDialog() == DialogResult.OK)
             {
-                string selectedFilePath = openFileDialog.FileName;
+                selectedFilePath = openFileDialog.FileName;
                 return selectedFilePath;
             }
 
