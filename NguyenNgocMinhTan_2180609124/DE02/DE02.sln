@@ -1,0 +1,37 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.7.34024.191
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DE02.GUI", "DE02.GUI.csproj", "{613DB9AB-F579-4BAB-A44B-36097DE516C2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DE02.BUS", "..\DE02.BUS\DE02.BUS.csproj", "{C86BB31D-085D-4F74-8D0F-3D0C09B16762}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DE02.DAL", "..\DE02.DAL\DE02.DAL.csproj", "{BFF2D87B-AB37-4BDC-A685-48C874162D70}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{613DB9AB-F579-4BAB-A44B-36097DE516C2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{613DB9AB-F579-4BAB-A44B-36097DE516C2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{613DB9AB-F579-4BAB-A44B-36097DE516C2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{613DB9AB-F579-4BAB-A44B-36097DE516C2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C86BB31D-085D-4F74-8D0F-3D0C09B16762}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C86BB31D-085D-4F74-8D0F-3D0C09B16762}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C86BB31D-085D-4F74-8D0F-3D0C09B16762}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C86BB31D-085D-4F74-8D0F-3D0C09B16762}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BFF2D87B-AB37-4BDC-A685-48C874162D70}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BFF2D87B-AB37-4BDC-A685-48C874162D70}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BFF2D87B-AB37-4BDC-A685-48C874162D70}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BFF2D87B-AB37-4BDC-A685-48C874162D70}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {89979998-CA9C-4102-85E7-A24D08F0EE2A}
+	EndGlobalSection
+EndGlobal
