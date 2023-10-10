@@ -162,7 +162,6 @@ namespace DE02
 
         private void btLuu_Click(object sender, EventArgs e)
         {
-            // Get the new SanPham objects from the ListView control.
             List<SanPham> newSP = new List<SanPham>();
 
             foreach (ListViewItem item in lvSanPham.Items)
@@ -176,10 +175,7 @@ namespace DE02
                 {
                     SP.NgayNhap = ngayNhap;
                 }
-                // Rest of your code for populating SP.MaLoai goes here...
                 var tenLoai = item.SubItems[3].Text;
-
-                // Query the related LoaiSP table to get the MaLoai based on TenLoai
                 var maLoai = db.LoaiSP
                     .Where(loai => loai.TenLoai == tenLoai)
                     .Select(loai => loai.MaLoai)
@@ -192,10 +188,7 @@ namespace DE02
 
                 newSP.Add(SP);
             }
-
-            // Get the MaSP values from the newSP list
             var maSPsInNewSP = newSP.Select(sp => sp.MaSP).ToList();
-
             // Retrieve existing entities from the database that have MaSP in the newSP list
             var existingEntities = db.SanPham.Where(s => maSPsInNewSP.Contains(s.MaSP)).ToList();
 
@@ -208,26 +201,28 @@ namespace DE02
                     // Update existingEntity properties with correspondingNewSP values
                     existingEntity.TenSP = correspondingNewSP.TenSP;
                     existingEntity.NgayNhap = correspondingNewSP.NgayNhap;
-                   // existingEntity.MaLoai = correspondingNewSP.MaLoai;
-                    // Update other properties as needed...
+                    existingEntity.MaLoai = correspondingNewSP.MaLoai;
                 }
             }
 
-            // Remove entities that are in the database but not in the newSP list
             var entitiesToDelete = db.SanPham.Where(s => !maSPsInNewSP.Contains(s.MaSP)).ToList();
             db.SanPham.RemoveRange(entitiesToDelete);
-
-            // Add new entities that are in the newSP list but not in the database
             var entitiesToAdd = newSP.Where(sp => !existingEntities.Any(ee => ee.MaSP == sp.MaSP)).ToList();
             db.SanPham.AddRange(entitiesToAdd);
 
-            // Save changes to the database
             db.SaveChanges();
+            lvSanPham.Refresh();
+            //disable it
+            btLuu.Enabled = false;
+            btKLuu.Enabled = false;
         }
 
         private void btKLuu_Click(object sender, EventArgs e)
         {
             RefreshData();
+            //disable it
+            btKLuu.Enabled = false;
+            btLuu.Enabled = false;
         }
 
         private void RefreshData()
