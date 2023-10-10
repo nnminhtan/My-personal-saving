@@ -1,0 +1,12 @@
+C:\Users\Minh Tan\source\repos\NguyenNgocMinhTan_2180609124\DE02.DAL\bin\Debug\DE02.DAL.dll.config
+C:\Users\Minh Tan\source\repos\NguyenNgocMinhTan_2180609124\DE02.DAL\bin\Debug\DE02.DAL.dll
+C:\Users\Minh Tan\source\repos\NguyenNgocMinhTan_2180609124\DE02.DAL\bin\Debug\DE02.DAL.pdb
+C:\Users\Minh Tan\source\repos\NguyenNgocMinhTan_2180609124\DE02.DAL\bin\Debug\EntityFramework.dll
+C:\Users\Minh Tan\source\repos\NguyenNgocMinhTan_2180609124\DE02.DAL\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Minh Tan\source\repos\NguyenNgocMinhTan_2180609124\DE02.DAL\bin\Debug\EntityFramework.xml
+C:\Users\Minh Tan\source\repos\NguyenNgocMinhTan_2180609124\DE02.DAL\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Minh Tan\source\repos\NguyenNgocMinhTan_2180609124\DE02.DAL\obj\Debug\DE02.DAL.csproj.AssemblyReference.cache
+C:\Users\Minh Tan\source\repos\NguyenNgocMinhTan_2180609124\DE02.DAL\obj\Debug\DE02.DAL.csproj.CoreCompileInputs.cache
+C:\Users\Minh Tan\source\repos\NguyenNgocMinhTan_2180609124\DE02.DAL\obj\Debug\DE02.DAL.csproj.CopyComplete
+C:\Users\Minh Tan\source\repos\NguyenNgocMinhTan_2180609124\DE02.DAL\obj\Debug\DE02.DAL.dll
+C:\Users\Minh Tan\source\repos\NguyenNgocMinhTan_2180609124\DE02.DAL\obj\Debug\DE02.DAL.pdb
